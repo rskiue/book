@@ -117,9 +117,9 @@ We will approximate standard error to 0.027[^longnote]
 
 <!--chapter:end:03-method.Rmd-->
 
-# Applications
+# メモ２
 
-Some _significant_ applications are demonstrated in this chapter.
+Dockerの使い方について整理予定
 
 ## Example one
 
