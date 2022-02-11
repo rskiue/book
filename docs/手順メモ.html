@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Applications | test_markdown</title>
+  <title>Chapter 3 手順メモ | test_markdown</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Applications | test_markdown" />
+  <meta property="og:title" content="Chapter 3 手順メモ | test_markdown" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Applications | test_markdown" />
+  <meta name="twitter:title" content="Chapter 3 手順メモ | test_markdown" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="methods.html"/>
-<link rel="next" href="final-words.html"/>
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="methods.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -198,14 +198,28 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="applications" class="section level1" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Applications</h1>
-<p>Some <em>significant</em> applications are demonstrated in this chapter.</p>
-<div id="example-one" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Example one</h2>
-</div>
-<div id="example-two" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Example two</h2>
+<div id="手順メモ" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> 手順メモ</h1>
+<p>Bookdownをweb（github.io）上で掲載する。</p>
+<ul>
+<li><p>とりあえずbookdown形式のファイルを作る。Bookdownの作り方は、作成者の<a href="https://bookdown.org/yihui/bookdown/get-started.html">Yihui氏のチュートリアル</a>が参考になる。</p></li>
+<li><p>チュートリアルに記載されている通り、デモ用のファイルを一式ダウンロードするのが早い。</p></li>
+<li><p>基本的にbookdownパッケージをRstudioでインストール、tinytexをインストールした上で、デモ用のRprojファイルを開き、index.Rmdファイルを開いてBuild BookするだけでOK。</p></li>
+<li><p>ただし、webで公開することを念頭に置く場合は、<code>_bookdown.yml</code>で、<code>output_dir: "docs"</code> を記載する必要がある（参考情報のYihui氏のページ参照）。これによって、Rmd達から出力されるhtmlファイルがdocsフォルダに格納されることになる。</p></li>
+<li><p>これをpushする。</p></li>
+<li><p>Github PagesのSettingsでSourceをdocsにする。これにより、デフォルトだとレポジトリ直下に置かれたindex.htmlファイルをもとにページが作られるが、docsフォルダにあるhtmlをベースに作ってくれよと指定することになる。</p></li>
+</ul>
+<div id="参考情報" class="section level3" number="3.0.1">
+<h3><span class="header-section-number">3.0.1</span> 参考情報</h3>
+<ul>
+<li><p>参考</p>
+<ul>
+<li><p>レポジトリ名を(username).github.ioにすると、同名のURLのGithub Pagesとなる。レポジトリ名をその他の名前（aaa）とすると、(username).github.io/aaaでbookdownページが作成される。</p></li>
+<li><p>BookdownのGithub Pagesでの公開は、<a href="https://bookdown.org/yihui/bookdown/github.html">Yihui氏のページ</a>が参考になる。同ページではJekyllを無効化するためのファイルを作れなどと記載があるが、なくても何とかなった。</p></li>
+<li><p><a href="https://gedevan-aleksizde.github.io/rmarkdown-cookbook/bookdown.html#ref-rmarkdown2018">R markdown cookbook（翻訳版）</a>も参考になる。</p></li>
+</ul></li>
+<li></li>
+</ul>
 
 </div>
 </div>
@@ -214,8 +228,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="final-words.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -246,7 +260,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-application.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-literature.Rmd",
 "text": "Edit"
 },
 "history": {

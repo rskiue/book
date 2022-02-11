@@ -4,9 +4,9 @@
 %
 \documentclass[
 ]{book}
-\title{A Minimal Book Example}
-\author{Yihui Xie}
-\date{2022-02-11}
+\title{test\_markdown}
+\author{Inoue}
+\date{2022/1/16}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -40,8 +40,8 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={A Minimal Book Example},
-  pdfauthor={Yihui Xie},
+  pdftitle={test\_markdown},
+  pdfauthor={Inoue},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
@@ -223,10 +223,43 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 
 You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 
-\hypertarget{literature}{%
-\chapter{Literature}\label{literature}}
+\hypertarget{ux624bux9806ux30e1ux30e2}{%
+\chapter{手順メモ}\label{ux624bux9806ux30e1ux30e2}}
 
-Here is a review of existing methods.
+Bookdownをweb（github.io）上で掲載する。
+
+\begin{itemize}
+\item
+  とりあえずbookdown形式のファイルを作る。Bookdownの作り方は、作成者の\href{https://bookdown.org/yihui/bookdown/get-started.html}{Yihui氏のチュートリアル}が参考になる。
+\item
+  チュートリアルに記載されている通り、デモ用のファイルを一式ダウンロードするのが早い。
+\item
+  基本的にbookdownパッケージをRstudioでインストール、tinytexをインストールした上で、デモ用のRprojファイルを開き、index.Rmdファイルを開いてBuild BookするだけでOK。
+\item
+  ただし、webで公開することを念頭に置く場合は、\texttt{\_bookdown.yml}で、\texttt{output\_dir:\ "docs"} を記載する必要がある（参考情報のYihui氏のページ参照）。これによって、Rmd達から出力されるhtmlファイルがdocsフォルダに格納されることになる。
+\item
+  これをpushする。
+\item
+  Github PagesのSettingsでSourceをdocsにする。これにより、デフォルトだとレポジトリ直下に置かれたindex.htmlファイルをもとにページが作られるが、docsフォルダにあるhtmlをベースに作ってくれよと指定することになる。
+\end{itemize}
+
+\hypertarget{ux53c2ux8003ux60c5ux5831}{%
+\subsection{参考情報}\label{ux53c2ux8003ux60c5ux5831}}
+
+\begin{itemize}
+\item
+  参考
+
+  \begin{itemize}
+  \item
+    レポジトリ名を(username).github.ioにすると、同名のURLのGithub Pagesとなる。レポジトリ名をその他の名前（aaa）とすると、(username).github.io/aaaでbookdownページが作成される。
+  \item
+    BookdownのGithub Pagesでの公開は、\href{https://bookdown.org/yihui/bookdown/github.html}{Yihui氏のページ}が参考になる。同ページではJekyllを無効化するためのファイルを作れなどと記載があるが、なくても何とかなった。
+  \item
+    \href{https://gedevan-aleksizde.github.io/rmarkdown-cookbook/bookdown.html\#ref-rmarkdown2018}{R markdown cookbook（翻訳版）}も参考になる。
+  \end{itemize}
+\item
+\end{itemize}
 
 \hypertarget{methods}{%
 \chapter{Methods}\label{methods}}
@@ -267,6 +300,25 @@ Some \emph{significant} applications are demonstrated in this chapter.
 \chapter{Final Words}\label{final-words}}
 
 We have finished a nice book.
+
+\hypertarget{r-markdown}{%
+\section{R Markdown}\label{r-markdown}}
+
+\begin{itemize}
+\tightlist
+\item
+  まずRmdでファイルを作る
+\item
+  次に、htmlにレンダリングする
+\item
+  ページの内容はcssで修飾？
+\item
+  pushする。
+\end{itemize}
+
+\[
+y=\beta_0+\beta_1X
+\]
 
   \bibliography{book.bib,packages.bib}
 

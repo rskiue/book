@@ -1,3 +1,27 @@
-# Literature
+# 手順メモ
 
-Here is a review of existing methods.
+Bookdownをweb（github.io）上で掲載する。
+
+-   とりあえずbookdown形式のファイルを作る。Bookdownの作り方は、作成者の[Yihui氏のチュートリアル](https://bookdown.org/yihui/bookdown/get-started.html)が参考になる。
+
+-   チュートリアルに記載されている通り、デモ用のファイルを一式ダウンロードするのが早い。
+
+-   基本的にbookdownパッケージをRstudioでインストール、tinytexをインストールした上で、デモ用のRprojファイルを開き、index.Rmdファイルを開いてBuild BookするだけでOK。
+
+-   ただし、webで公開することを念頭に置く場合は、`_bookdown.yml`で、`output_dir: "docs"` を記載する必要がある（参考情報のYihui氏のページ参照）。これによって、Rmd達から出力されるhtmlファイルがdocsフォルダに格納されることになる。
+
+-   これをpushする。
+
+-   Github PagesのSettingsでSourceをdocsにする。これにより、デフォルトだとレポジトリ直下に置かれたindex.htmlファイルをもとにページが作られるが、docsフォルダにあるhtmlをベースに作ってくれよと指定することになる。
+
+### 参考情報
+
+-   参考
+
+    -   レポジトリ名を(username).github.ioにすると、同名のURLのGithub Pagesとなる。レポジトリ名をその他の名前（aaa）とすると、(username).github.io/aaaでbookdownページが作成される。
+
+    -   BookdownのGithub Pagesでの公開は、[Yihui氏のページ](https://bookdown.org/yihui/bookdown/github.html)が参考になる。同ページではJekyllを無効化するためのファイルを作れなどと記載があるが、なくても何とかなった。
+
+    -   [R markdown cookbook（翻訳版）](https://gedevan-aleksizde.github.io/rmarkdown-cookbook/bookdown.html#ref-rmarkdown2018)も参考になる。
+
+-   
