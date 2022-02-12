@@ -1,0 +1,13 @@
+fig:nice-fig
+tab:nice-tab
+prerequisites
+intro
+手順メモ
+参考情報
+methods
+math-example
+メモ２
+example-one
+example-two
+final-words
+r-markdown
